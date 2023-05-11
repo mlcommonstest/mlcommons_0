@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "uuid": "e9327c66-bf5c-4b77-87ce-dcf01d7bcc7c",
+    "creation_date": "2023-05-10T12:20:29.542034",
+    "upload_date": null
+  },
+  "results": [
+    {
+      "benchmark_id": "image_classification",
+      "benchmark_name": "Image Classification",
+      "loadgen_scenario": "SingleStream",
+      "backend_settings": {
+        "accelerator_code": "neuron-mdla",
+        "accelerator_desc": "MediaTek NN accelerator via the Neuron Delegate",
+        "framework": "TFLite",
+        "model_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/tflite/mobilenet_edgetpu_224_1.0_uint8.tflite",
+        "batch_size": 1,
+        "extra_settings": [
+          {
+            "id": "num_threads",
+            "name": "Number of threads",
+            "value": "4",
+            "value_name": "4 threads"
+          }
+        ]
+      },
+      "performance_run": {
+        "throughput": {
+          "value": 366.1044400780388
+        },
+        "accuracy": null,
+        "accuracy2": null,
+        "dataset": {
+          "name": "Open images subset for classification",
+          "type": "IMAGENET",
+          "data_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/imagenet.zip",
+          "groundtruth_path": ""
+        },
+        "measured_duration": 60.9182014465332,
+        "measured_samples": 22373,
+        "start_datetime": "2023-05-10T11:44:07.866387",
+        "loadgen_info": {
+          "validity": true,
+          "duration": 59.93742361100001
+        }
+      },
+      "accuracy_run": null,
+      "min_duration": 60.0,
+      "min_samples": 1024,
+      "backend_info": {
+        "filename": "libtfliteneuronbackend",
+        "vendor_name": "Google",
+        "backend_name": "TFLite",
+        "accelerator_name": "Neuron"
+      }
+    },
+    {
+      "benchmark_id": "object_detection",
+      "benchmark_name": "Object Detection",
+      "loadgen_scenario": "SingleStream",
+      "backend_settings": {
+        "accelerator_code": "neuron",
+        "accelerator_desc": "MediaTek NN accelerator + CPU via the Neuron Delegate",
+        "framework": "TFLite",
+        "model_path": "https://github.com/mlcommons/mobile_models/raw/main/v1_0/tflite/mobiledet_qat.tflite",
+        "batch_size": 1,
+        "extra_settings": [
+          {
+            "id": "num_threads",
+            "name": "Number of threads",
+            "value": "4",
+            "value_name": "4 threads"
+          }
+        ]
+      },
+      "performance_run": {
+        "throughput": {
+          "value": 157.55283888946047
+        },
+        "accuracy": null,
+        "accuracy2": null,
+        "dataset": {
+          "name": "Open images subset for detection",
+          "type": "COCO",
+          "data_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/coco.zip",
+          "groundtruth_path": ""
+        },
+        "measured_duration": 61.27507019042969,
+        "measured_samples": 11759,
+        "start_datetime": "2023-05-10T11:50:09.515795",
+        "loadgen_info": {
+          "validity": true,
+          "duration": 59.918090330999995
+        }
+      },
+      "accuracy_run": null,
+      "min_duration": 60.0,
+      "min_samples": 1024,
+      "backend_info": {
+        "filename": "libtfliteneuronbackend",
+        "vendor_name": "Google",
+        "backend_name": "TFLite",
+        "accelerator_name": "Neuron"
+      }
+    },
+    {
+      "benchmark_id": "image_segmentation_v2",
+      "benchmark_name": "v2.0 Image Segmentation",
+      "loadgen_scenario": "SingleStream",
+      "backend_settings": {
+        "accelerator_code": "neuron",
+        "accelerator_desc": "MediaTek NN accelerator via the Neuron Delegate",
+        "framework": "TFLite",
+        "model_path": "https://github.com/mlcommons/mobile_open/raw/main/vision/mosaic/models_and_checkpoints/R4/mobile_segmenter_r4_quant_argmax_uint8.tflite",
+        "batch_size": 0,
+        "extra_settings": [
+          {
+            "id": "num_threads",
+            "name": "Number of threads",
+            "value": "4",
+            "value_name": "4 threads"
+          }
+        ]
+      },
+      "performance_run": {
+        "throughput": {
+          "value": 64.55072822258538
+        },
+        "accuracy": null,
+        "accuracy2": null,
+        "dataset": {
+          "name": "Open images subset for segmentation",
+          "type": "ADE20K",
+          "data_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/ade20k.zip",
+          "groundtruth_path": ""
+        },
+        "measured_duration": 61.97431564331055,
+        "measured_samples": 3917,
+        "start_datetime": "2023-05-10T11:56:11.351823",
+        "loadgen_info": {
+          "validity": true,
+          "duration": 59.999983197
+        }
+      },
+      "accuracy_run": null,
+      "min_duration": 60.0,
+      "min_samples": 1024,
+      "backend_info": {
+        "filename": "libtfliteneuronbackend",
+        "vendor_name": "Google",
+        "backend_name": "TFLite",
+        "accelerator_name": "Neuron"
+      }
+    },
+    {
+      "benchmark_id": "natural_language_processing",
+      "benchmark_name": "Language Understanding",
+      "loadgen_scenario": "SingleStream",
+      "backend_settings": {
+        "accelerator_code": "neuron-no-ahwb",
+        "accelerator_desc": "MediaTek NN accelerator + VPU via the Neuron Delegate",
+        "framework": "TFLite",
+        "model_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/tflite/mobilebert_int8_384_nnapi.tflite",
+        "batch_size": 1,
+        "extra_settings": [
+          {
+            "id": "num_threads",
+            "name": "Number of threads",
+            "value": "4",
+            "value_name": "4 threads"
+          }
+        ]
+      },
+      "performance_run": {
+        "throughput": {
+          "value": 3.2366480217939047
+        },
+        "accuracy": null,
+        "accuracy2": null,
+        "dataset": {
+          "name": "Squad V1.1 mini set",
+          "type": "SQUAD",
+          "data_path": "https://github.com/mlcommons/mobile_models/raw/main/v1_0/datasets/squad_eval_mini.tfrecord",
+          "groundtruth_path": ""
+        },
+        "measured_duration": 313.2128601074219,
+        "measured_samples": 1024,
+        "start_datetime": "2023-05-10T12:02:13.982774",
+        "loadgen_info": {
+          "validity": true,
+          "duration": 313.067680768
+        }
+      },
+      "accuracy_run": null,
+      "min_duration": 60.0,
+      "min_samples": 1024,
+      "backend_info": {
+        "filename": "libtfliteneuronbackend",
+        "vendor_name": "Google",
+        "backend_name": "TFLite",
+        "accelerator_name": "Neuron"
+      }
+    },
+    {
+      "benchmark_id": "super_resolution",
+      "benchmark_name": "Super Resolution ",
+      "loadgen_scenario": "SingleStream",
+      "backend_settings": {
+        "accelerator_code": "neuron",
+        "accelerator_desc": "MediaTek NN accelerator via the Neuron Delegate",
+        "framework": "TFLite",
+        "model_path": "https://github.com/mlcommons/mobile_models/raw/main/v3_0/tflite/edsr_f32b5_full_qint8.tflite",
+        "batch_size": 0,
+        "extra_settings": [
+          {
+            "id": "num_threads",
+            "name": "Number of threads",
+            "value": "4",
+            "value_name": "4 threads"
+          }
+        ]
+      },
+      "performance_run": {
+        "throughput": {
+          "value": 8.007568946349744
+        },
+        "accuracy": null,
+        "accuracy2": null,
+        "dataset": {
+          "name": "SNUSR dataset for performance test",
+          "type": "SNUSR",
+          "data_path": "https://github.com/mlcommons/mobile_models/raw/main/v3_0/datasets/snusr_lr.zip",
+          "groundtruth_path": ""
+        },
+        "measured_duration": 127.241943359375,
+        "measured_samples": 1024,
+        "start_datetime": "2023-05-10T12:12:27.292780",
+        "loadgen_info": {
+          "validity": true,
+          "duration": 126.774382592
+        }
+      },
+      "accuracy_run": null,
+      "min_duration": 60.0,
+      "min_samples": 1024,
+      "backend_info": {
+        "filename": "libtfliteneuronbackend",
+        "vendor_name": "Google",
+        "backend_name": "TFLite",
+        "accelerator_name": "Neuron"
+      }
+    },
+    {
+      "benchmark_id": "image_classification_offline",
+      "benchmark_name": "Image Classification (Offline)",
+      "loadgen_scenario": "Offline",
+      "backend_settings": {
+        "accelerator_code": "neuron-mdla",
+        "accelerator_desc": "MediaTek NN accelerator via the Neuron Delegate",
+        "framework": "TFLite",
+        "model_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/tflite/mobilenet_edgetpu_224_1.0_uint8.tflite",
+        "batch_size": 256,
+        "extra_settings": [
+          {
+            "id": "num_threads",
+            "name": "Number of threads",
+            "value": "4",
+            "value_name": "4 threads"
+          }
+        ]
+      },
+      "performance_run": {
+        "throughput": {
+          "value": 629.4637465035839
+        },
+        "accuracy": null,
+        "accuracy2": null,
+        "dataset": {
+          "name": "Open images subset for classification",
+          "type": "IMAGENET",
+          "data_path": "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/imagenet.zip",
+          "groundtruth_path": ""
+        },
+        "measured_duration": 39.99013137817383,
+        "measured_samples": 24576,
+        "start_datetime": "2023-05-10T12:19:42.067356",
+        "loadgen_info": {
+          "validity": true,
+          "duration": 39.042756849
+        }
+      },
+      "accuracy_run": null,
+      "min_duration": 0.0,
+      "min_samples": 24576,
+      "backend_info": {
+        "filename": "libtfliteneuronbackend",
+        "vendor_name": "Google",
+        "backend_name": "TFLite",
+        "accelerator_name": "Neuron"
+      }
+    }
+  ],
+  "environment_info": {
+    "platform": "android",
+    "value": {
+      "android": {
+        "os_version": "SP1A.210812.016",
+        "manufacturer": "Xiaomi",
+        "model_code": "22101316C",
+        "model_name": "22101316C",
+        "board_code": "ruby",
+        "proc_cpuinfo_soc_name": "MediaTek MT6877V/TTZA",
+        "props": [
+          {
+            "type": "socName",
+            "name": "ro.soc.model",
+            "value": "MT6877V/TTZA"
+          },
+          {
+            "type": "socManufacturer",
+            "name": "ro.soc.manufacturer",
+            "value": "Mediatek"
+          }
+        ]
+      },
+      "ios": null,
+      "windows": null
+    }
+  },
+  "build_info": {
+    "version": "3.0.0",
+    "build_number": "20230409",
+    "build_date": "2023-05-10T11:16:05.168734",
+    "official_release_flag": true,
+    "dev_test_flag": false,
+    "backend_list": [
+      "libtfliteneuronbackend",
+      "libtflitepixelbackend",
+      "libqtibackend",
+      "libsamsungbackend",
+      "libtflitebackend"
+    ],
+    "git_branch": "submission-v3.0",
+    "git_commit": "e39c414eb43f7f10996cdb31736520260b864c53",
+    "git_dirty_flag": true
+  }
+}
